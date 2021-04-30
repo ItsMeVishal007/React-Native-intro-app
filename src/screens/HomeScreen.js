@@ -19,6 +19,16 @@ const HomeScreen = ({ navigation }) => {
       title='Go to Image Demo'
     />
 
+    <Button
+      onPress={() => { navigation.navigate('CounterComp') }}
+      title='Go to Counter Page'
+    />
+
+    <Button
+      onPress={() => { navigation.navigate('ColorComp') }}
+      title='Go to Color Page'
+    />
+
   </View>
   );
 };
