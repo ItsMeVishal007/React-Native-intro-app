@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet, Button , FlatList } from 'react-native';
 
 const Color = () => {
- const [boxColor , setBoxColor] = useState([0,0,0]);
+ const [boxColor , setBoxColor] = useState([]);
 
- console.log(boxColor)
+ // console.log(boxColor)
  
  const handleColor = () => {
   const red = Math.floor(Math.random() * 256);
@@ -16,11 +16,21 @@ const Color = () => {
  return (
   <View>
    <Button 
-   onPress={()=>{setBoxColor(handleColor())}}
+   onPress={()=>{setBoxColor([...boxColor , handleColor()])}}
    title="Change Color" 
    />
    <Text>Hello</Text>
-   <View style={{height: 100 , width : 100 , backgroundColor: `rgb(${boxColor})`}} />
+   <FlatList 
+   horizontal
+   keyExtractor={(item)=> item}
+   data={boxColor}
+   renderItem={({item})=>{
+    // console.log(item)
+    return(
+     <View style={{height: 100 , width : 100 , backgroundColor: item , marginVertical:30}} />
+    )
+   }}
+   />
   </View>
  )
 }
