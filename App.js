@@ -7,6 +7,7 @@ import PractiseList from './src/screens/PractiseList';
 import ImageComponent from './src/screens/ImageComponent';
 import Counter from './src/screens/Counter';
 import Color from './src/screens/Color';
+import CustomColorX from './src/screens/CustomColor';
 
 const navigator = createStackNavigator(
   {
@@ -17,6 +18,7 @@ const navigator = createStackNavigator(
     ImageComp : ImageComponent,
     CounterComp: Counter,
     ColorComp : Color,
+    CustomColor : CustomColorX,
   },
   {
     initialRouteName: 'Home',

@@ -29,6 +29,11 @@ const HomeScreen = ({ navigation }) => {
       title='Go to Color Page'
     />
 
+    <Button 
+      onPress={()=>{navigation.navigate('CustomColor')}}
+      title='Go to custom color picker page'
+    />
+
   </View>
   );
 };
