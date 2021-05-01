@@ -8,6 +8,7 @@ import ImageComponent from './src/screens/ImageComponent';
 import Counter from './src/screens/Counter';
 import Color from './src/screens/Color';
 import CustomColorX from './src/screens/CustomColor';
+import TextScreen from './src/screens/TextScreen';
 
 const navigator = createStackNavigator(
   {
@@ -19,6 +20,8 @@ const navigator = createStackNavigator(
     CounterComp: Counter,
     ColorComp : Color,
     CustomColor : CustomColorX,
+    TextScreen,
+    
   },
   {
     initialRouteName: 'Home',
